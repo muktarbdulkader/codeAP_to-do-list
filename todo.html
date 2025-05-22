@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="tod.css" />
+</head>
+<body>
+  <button onclick="toggleBackground()" class="toggle-button">🌙</button>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>To-Do List</h1>
+    <div id="clock"></div> <!-- Live Clock here -->
+    <div class="div">
+      <input type="text" id="taskInput" placeholder="Enter a task..." />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+  </div>
+  <!-- Task List Section -->
+  <div class="container">
+    <ul id="taskList"></ul>
+  </div>
+
+  <!-- Footer -->
+   <div id="footerSpacer"></div>
+  <footer class="footer">
+    <ul class="footer__nav">
+      <li class="footer__item"><a href="javascript:void(0)" onclick="openModal('privacyModal')" class="footer__link">Privacy</a></li>
+      <li class="footer__item"><a href="javascript:void(0)" onclick="openModal('termsModal')" class="footer__link">Terms</a></li>
+      <li class="footer__item"><a href="javascript:void(0)" onclick="openModal('faqModal')" class="footer__link">FAQ</a></li>
+      <li class="footer__item"><a href="javascript:void(0)" onclick="openModal('contactModal')" class="footer__link">Contact Us</a></li>
+    </ul>
+    <img src="muk.jpg" alt="Logo" class="footer__logo" />
+    <p class="footer__copyright">
+      &copy; Copyright by
+      <a
+        class="footer__link twitter-link"
+        target="_blank"
+        href="https://twitter.com/Muktarabdu5138"
+        >MUKTAR ABDULKADER</a
+      >. This is offered by @codealpha for internship.
+    </p>
+  </footer>
+
+  <!-- Overlay for smooth background toggle effect -->
+  <div class="overlay hidden"></div>
+
+  <!-- MODALS -->
+
+  <!-- Privacy Modal -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+      <h2>Privacy Policy</h2>
+      <p>Your privacy is important to us. We do not share your data with third parties. Your tasks and personal information stay only on your device.</p>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('termsModal')">&times;</span>
+      <h2>Terms and Conditions</h2>
+      <p>Please use this To-Do List app responsibly. The app is provided as-is without any guarantees. We reserve the right to update or change terms.</p>
+    </div>
+  </div>
+
+  <!-- FAQ Modal -->
+  <div id="faqModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('faqModal')">&times;</span>
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <li><strong>How do I add a task?</strong> Use the input box and click "Add Task".</li>
+      <li><strong>Can I add a task that has the same name as a completed task?</strong> Yes! You can add a new task with the same name only if the previous task with that name is marked as completed.</li>
+      <li><strong>Can I filter tasks?</strong> Filtering is coming soon!</li>
+      <li><strong>Is my data saved?</strong> Tasks are saved only locally in your browser.</li>
+    </ul>
+  </div>
+</div>
+
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Contact Us</h2>
+      <p>You can reach us at <a href="muktarabdulkader957@gmail.com" target="_blank">muktarabdulkader957@gmail.com</a></p>
+      <p>Phone: +251916662982</p>
+      <p>addres: ethopian</p>
+    </div>
+  </div>
+  
+
+  <script src="todo.js"></script>
+</body>
+</html>
